@@ -1,6 +1,6 @@
 {% set name = "control" %}
-{% set version = "0.7.0" %}
-{% set sha256 = "18ce26206e40f4ba62b2a0bf86943598a6ec3f957e15bd46d17b9e1e314f19d6" %}
+{% set version = "0.8.0" %}
+{% set sha256 = "4e3dbdce88e2bc2bd06e4a3cbc3421369f2c0f38e496445858319aba950430be" %}
 
 package:
   name: {{ name|lower }}
@@ -41,3 +41,4 @@ about:
 extra:
   recipe-maintainers:
     - moorepants
+    - murrayrm
