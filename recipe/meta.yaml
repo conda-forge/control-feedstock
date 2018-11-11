@@ -22,7 +22,7 @@ requirements:
     - pip
   run:
     - python
-    - numpy
+    - {{ pin_compatible('numpy') }}
     - scipy
     - matplotlib
     # NOTE : Once Slycot is available as a Windows conda package, update this.
