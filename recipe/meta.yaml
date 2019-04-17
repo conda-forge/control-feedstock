@@ -24,8 +24,8 @@ requirements:
     - python
     - numpy
     - scipy
-    - matplotlib <3.0	# [py27]
-    - matplotlib	# [not py27]
+    - matplotlib <3.0  # [py27]
+    - matplotlib  # [not py27]
     # NOTE : Once Slycot is available as a Windows conda package, update this.
     - slycot  # [unix]
 
