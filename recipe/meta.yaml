@@ -16,6 +16,8 @@ build:
   script: python -m pip install --no-deps --ignore-installed .
 
 requirements:
+  build:
+    - {{ cdt('xorg-x11-proto-devel') }}  # [linux and py27]
   host:
     - pip
     - python
