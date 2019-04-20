@@ -28,7 +28,6 @@ requirements:
     - matplotlib  # [not py27]
     # NOTE : Once Slycot is available as a Windows conda package, update this.
     - slycot  # [unix]
-    - {{ cdt('xorg-x11-proto-devel') }}  # [linux and py27]
 
 test:
   imports:
