@@ -1,6 +1,6 @@
 {% set name = "control" %}
-{% set version = "0.8.3" %}
-{% set sha256 = "1fcfdcf39f96523cb1f2cf7bf7b8ae68ec3ef8350e5c55e17e02afdb0872edbb" %}
+{% set version = "0.8.4" %}
+{% set sha256 = "fed8ca6c773175bea14b121c001eee20c48977629a498d9a2d19a85490112ba5" %}
 
 package:
   name: {{ name|lower }}
@@ -12,7 +12,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 2
+  number: 0
   script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
