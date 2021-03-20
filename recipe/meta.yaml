@@ -1,6 +1,6 @@
 {% set name = "control" %}
-{% set version = "0.8.4" %}
-{% set sha256 = "fed8ca6c773175bea14b121c001eee20c48977629a498d9a2d19a85490112ba5" %}
+{% set version = "0.9.0" %}
+{% set sha256 = "34eeca077cf002a2f22a9334c8998ec5b3bcc0fdae2aac790a923cf8bc80245a" %}
 
 package:
   name: {{ name|lower }}
