@@ -24,7 +24,7 @@ requirements:
     - python
     - numpy
     - scipy
-    - matplotlib
+    - matplotlib-base
     - slycot
 
 test:
