@@ -1,6 +1,6 @@
 {% set name = "control" %}
-{% set version = "0.9.0" %}
-{% set sha256 = "34eeca077cf002a2f22a9334c8998ec5b3bcc0fdae2aac790a923cf8bc80245a" %}
+{% set version = "0.9.1" %}
+{% set sha256 = "8c9084bf386eafcf5d74008f780fae6dec68d243d18a380c866ac10a3549f8d3" %}
 
 package:
   name: {{ name|lower }}
@@ -24,10 +24,8 @@ requirements:
     - python
     - numpy
     - scipy
-    - matplotlib-base <3.0  # [py27]
-    - matplotlib-base  # [not py27]
-    # NOTE : Once Slycot is available as a Windows conda package, update this.
-    - slycot  # [unix]
+    - matplotlib-base
+    - slycot
 
 test:
   imports:
@@ -45,3 +43,4 @@ extra:
   recipe-maintainers:
     - moorepants
     - murrayrm
+    - bnavigator
