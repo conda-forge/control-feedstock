@@ -1,7 +1,7 @@
 About control
 =============
 
-Home: http://python-control.sourceforge.net
+Home: https://python-control.org
 
 Package license: BSD-3-Clause
 
@@ -11,7 +11,7 @@ Summary: Python Control Systems Library
 
 Development: https://github.com/python-control/python-control
 
-Documentation: http://python-control.readthedocs.org/
+Documentation: https://python-control.readthedocs.org/
 
 Current build status
 ====================
