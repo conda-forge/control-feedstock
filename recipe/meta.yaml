@@ -1,6 +1,6 @@
 {% set name = "control" %}
-{% set version = "0.9.3" %}
-{% set sha256 = "c7a916570868f88c9c03638e38a61d561f9bf6ed65703bb1114c19f66367b648" %}
+{% set version = "0.9.3.post1" %}
+{% set sha256 = "38ca93227a3d8f3b44b66c21a4e2adb8d1733db9a1bf56de552a404e3027590d" %}
 
 package:
   name: {{ name|lower }}
@@ -19,10 +19,10 @@ build:
 requirements:
   host:
     - pip
-    - python >=3.7
+    - python >=3.8
     - setuptools
   run:
-    - python >=3.7
+    - python >=3.8
     - numpy
     - scipy
     - matplotlib-base
@@ -33,11 +33,11 @@ test:
     - control
 
 about:
-  home: http://python-control.sourceforge.net
+  home: https://python-control.org
   license: BSD-3-Clause
   license_file: LICENSE
   dev_url: https://github.com/python-control/python-control
-  doc_url: http://python-control.readthedocs.org/
+  doc_url: https://python-control.readthedocs.org/
   summary: 'Python Control Systems Library'
 
 extra:
