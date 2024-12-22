@@ -1,3 +1,4 @@
+{% set python_min = '3.10' %}
 {% set name = "control" %}
 {% set version = "0.10.1" %}
 {% set sha256 = "3bba142c9274d896efda8c9a21aaf61dd38d673d6d40714a7989d143428e738c" %}
@@ -8,28 +9,30 @@ package:
 
 source:
   fn: {{ name }}-{{ version }}.tar.gz
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: {{ sha256 }}
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
   host:
     - pip
-    - python >=3.10
+    - python {{ python_min }}
     - setuptools
     - setuptools-scm
   run:
-    - python >=3.10
+    - python >={{ python_min }}
     - numpy
     - scipy
     - matplotlib-base
     - slycot
 
 test:
+  requires:
+    - python {{ python_min }}
   imports:
     - control
 
