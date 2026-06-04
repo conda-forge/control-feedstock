@@ -13,28 +13,46 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 0
+  number: 1
   noarch: python
-  script: {{ PYTHON }} -m pip install . --no-deps -vv
 
-requirements:
-  host:
-    - pip
-    - python {{ python_min }}
-    - setuptools
-    - setuptools-scm
-  run:
-    - python >={{ python_min }}
-    - numpy
-    - scipy
-    - matplotlib-base
-    - slycot
-
-test:
-  requires:
-    - python {{ python_min }}
-  imports:
-    - control
+outputs:
+  - name: {{ name|lower }}-base
+    script: build_base.sh  # needs to be bash script when an output
+    build:
+      noarch: python
+    requirements:
+      build:
+        - python                                 # [build_platform != target_platform]
+        - cross-python_{{ target_platform }}     # [build_platform != target_platform]
+      host:
+        - pip
+        - python {{ python_min }}
+        - setuptools
+        - setuptools-scm
+      run:
+        - python >={{ python_min }}
+        - numpy
+        - scipy
+        - matplotlib-base
+    test:
+      requires:
+        - python {{ python_min }}
+      imports:
+        - control
+  - name: {{ name|lower }}
+    requirements:
+      host:
+        - python {{ python_min }}
+      run:
+        - python >={{ python_min }}
+        - {{ pin_subpackage('control-base', exact=True) }}
+        - slycot
+    test:
+      requires:
+        - python {{ python_min }}
+      imports:
+        - control
 
 about:
   home: https://python-control.org
